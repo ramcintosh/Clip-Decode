@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Clip Decode",
+  "description": "Decodes text from highlighted areas.",
+  "version": "1.0",
+
+  "permissions":
+  [
+    "tabs",
+    "activeTab",
+    "contextMenus"
+  ],
+
+  "background":
+  {
+    "scripts":["decodePicker.js"]
+  },
+
+  "content_scripts":
+  [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
